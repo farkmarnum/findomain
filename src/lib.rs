@@ -64,7 +64,7 @@ lazy_static! {
     };
     static ref OPTS: ResolverOpts = {
         let mut opts = ResolverOpts::default();
-        opts.timeout = Duration::from_secs(3);
+        opts.timeout = Duration::from_secs(1);
         opts
     };
 }

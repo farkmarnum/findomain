@@ -7,9 +7,6 @@ fn run() -> Result<()> {
     if arguments.check_updates {
         update_checker::main(&mut arguments)?
     }
-    if arguments.threads > 500 {
-        arguments.threads = 500
-    }
     rayon::ThreadPoolBuilder::new()
         .num_threads(arguments.threads)
         .build_global()
